@@ -16,7 +16,9 @@ This is just a note that keeps track of generating a QRCode according to some UR
 imageView.generateQRCodeWith(url: "your url string")
 ```
 
-#Feature
+![](http://ww1.sinaimg.cn/large/0065qDengy1fnjp1k5kpig309g0inwgb.gif)
+
+# Feature
 
 - Simple and pure codes
 
@@ -25,10 +27,10 @@ imageView.generateQRCodeWith(url: "your url string")
 - A file makes it easier. That is, a line code solves the problem of generating a QRCode
 
 
-#Finally
+# Finally
 
 if you like this repository, please support it via clicking Stars(QAQ). Thanks a lot. if you have any question or problem, please make an issue or pull a request. In addition, you can contact me through e-mail: `lchenfox@foxmail.com`. 
 
 
-Best withes.
+`Best wishes.`
 

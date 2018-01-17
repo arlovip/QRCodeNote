@@ -1,5 +1,6 @@
 # QRCodeNote
-This is just a note that keeps track of generating a QRCode according to some URL string.
+This is just a note that keeps track of generating a QRCode according to some URL string. It's inspired by **Objective-C** [ZYYCodePayDemo](https://github.com/ZSyingyu/ZYYCodePayDemo). I transform it in `Swift` language. Besides, I make it easier for you by an extension for UIImageView. 
+Now it's so convenient to use.
 
 # Usage:
 

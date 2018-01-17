@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1540C328FAC72846094DF2BA /* Pods_QRCodeNoteDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EAD0513177F10386BFCDE54 /* Pods_QRCodeNoteDemo.framework */; };
 		945B182F200F2D9B00073F85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945B182E200F2D9B00073F85 /* AppDelegate.swift */; };
 		945B1831200F2D9B00073F85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945B1830200F2D9B00073F85 /* ViewController.swift */; };
 		945B1834200F2D9B00073F85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 945B1832200F2D9B00073F85 /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		945B1839200F2D9B00073F85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 945B1837200F2D9B00073F85 /* LaunchScreen.storyboard */; };
 		945B1844200F2D9B00073F85 /* QRCodeNoteDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945B1843200F2D9B00073F85 /* QRCodeNoteDemoTests.swift */; };
 		945B184F200F2D9B00073F85 /* QRCodeNoteDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945B184E200F2D9B00073F85 /* QRCodeNoteDemoUITests.swift */; };
+		945B185D200F379A00073F85 /* QRCodeFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945B185C200F379A00073F85 /* QRCodeFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8EAD0513177F10386BFCDE54 /* Pods_QRCodeNoteDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QRCodeNoteDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		945B182B200F2D9B00073F85 /* QRCodeNoteDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRCodeNoteDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		945B182E200F2D9B00073F85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		945B1830200F2D9B00073F85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		945B184A200F2D9B00073F85 /* QRCodeNoteDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QRCodeNoteDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		945B184E200F2D9B00073F85 /* QRCodeNoteDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeNoteDemoUITests.swift; sourceTree = "<group>"; };
 		945B1850200F2D9B00073F85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		945B185C200F379A00073F85 /* QRCodeFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeFile.swift; sourceTree = "<group>"; };
+		EAFF0D44D3A762FAF0857BDD /* Pods-QRCodeNoteDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRCodeNoteDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QRCodeNoteDemo/Pods-QRCodeNoteDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		F7954BCC0C21DCD631BA8894 /* Pods-QRCodeNoteDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QRCodeNoteDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-QRCodeNoteDemo/Pods-QRCodeNoteDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1540C328FAC72846094DF2BA /* Pods_QRCodeNoteDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +88,8 @@
 				945B1842200F2D9B00073F85 /* QRCodeNoteDemoTests */,
 				945B184D200F2D9B00073F85 /* QRCodeNoteDemoUITests */,
 				945B182C200F2D9B00073F85 /* Products */,
+				B1A1311975B04D6B67BD5C8C /* Pods */,
+				F69C1BE29EA33874D693A9BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +108,7 @@
 			children = (
 				945B182E200F2D9B00073F85 /* AppDelegate.swift */,
 				945B1830200F2D9B00073F85 /* ViewController.swift */,
+				945B185C200F379A00073F85 /* QRCodeFile.swift */,
 				945B1832200F2D9B00073F85 /* Main.storyboard */,
 				945B1835200F2D9B00073F85 /* Assets.xcassets */,
 				945B1837200F2D9B00073F85 /* LaunchScreen.storyboard */,
@@ -125,6 +135,23 @@
 			path = QRCodeNoteDemoUITests;
 			sourceTree = "<group>";
 		};
+		B1A1311975B04D6B67BD5C8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EAFF0D44D3A762FAF0857BDD /* Pods-QRCodeNoteDemo.debug.xcconfig */,
+				F7954BCC0C21DCD631BA8894 /* Pods-QRCodeNoteDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F69C1BE29EA33874D693A9BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8EAD0513177F10386BFCDE54 /* Pods_QRCodeNoteDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 945B1853200F2D9B00073F85 /* Build configuration list for PBXNativeTarget "QRCodeNoteDemo" */;
 			buildPhases = (
+				4CD4FE3843C157A8E6222F6D /* [CP] Check Pods Manifest.lock */,
 				945B1827200F2D9B00073F85 /* Sources */,
 				945B1828200F2D9B00073F85 /* Frameworks */,
 				945B1829200F2D9B00073F85 /* Resources */,
+				BBA732ADF84DB78AD96C2FC2 /* [CP] Embed Pods Frameworks */,
+				0CBBC47BD2AA350EA899F081 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,11 +284,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CBBC47BD2AA350EA899F081 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QRCodeNoteDemo/Pods-QRCodeNoteDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CD4FE3843C157A8E6222F6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BBA732ADF84DB78AD96C2FC2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QRCodeNoteDemo/Pods-QRCodeNoteDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		945B1827200F2D9B00073F85 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				945B185D200F379A00073F85 /* QRCodeFile.swift in Sources */,
 				945B1831200F2D9B00073F85 /* ViewController.swift in Sources */,
 				945B182F200F2D9B00073F85 /* AppDelegate.swift in Sources */,
 			);
@@ -424,6 +503,7 @@
 		};
 		945B1854200F2D9B00073F85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAFF0D44D3A762FAF0857BDD /* Pods-QRCodeNoteDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,6 +519,7 @@
 		};
 		945B1855200F2D9B00073F85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7954BCC0C21DCD631BA8894 /* Pods-QRCodeNoteDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

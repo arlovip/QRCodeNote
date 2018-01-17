@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,80 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QRCodeNoteDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://www.baidu.com" borderStyle="roundedRect" placeholder="请输入二维码链接" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HZe-uS-Xf9">
+                                <rect key="frame" x="62" y="136" width="250" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.10390830785036087" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="6Yp-Eq-Y8f"/>
+                                    <constraint firstAttribute="height" constant="60" id="FmB-ER-yXL"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sIi-Hp-yOX">
+                                <rect key="frame" x="87.5" y="263" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.58128146530000002" green="0.84468853470000005" blue="0.38373101279999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Ca7-Cg-Djf"/>
+                                    <constraint firstAttribute="width" constant="200" id="b4l-Bk-Pix"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQg-Yl-hdZ">
+                                <rect key="frame" x="87.5" y="533" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.89942675828933716" green="0.046199940145015717" blue="0.78472661972045898" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HCJ-DT-6WV"/>
+                                    <constraint firstAttribute="width" constant="200" id="gPA-Sm-kcn"/>
+                                </constraints>
+                                <state key="normal" title="Generate a QRCode1">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="generateQRCode" destination="BYZ-38-t0r" eventType="touchUpInside" id="e2O-nJ-a0c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svc-bO-zUe">
+                                <rect key="frame" x="87" y="597" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.89942675829999996" green="0.04619994015" blue="0.78472661970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="V21-HZ-mjn"/>
+                                    <constraint firstAttribute="height" constant="50" id="tY1-LQ-SdU"/>
+                                </constraints>
+                                <state key="normal" title="Generate a QRCode2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="GenerateQRCode2" destination="BYZ-38-t0r" eventType="touchUpInside" id="eTL-sp-eZb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.67812997102737427" green="0.80192214250564575" blue="0.93101042509078979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rQg-Yl-hdZ" firstAttribute="top" secondItem="sIi-Hp-yOX" secondAttribute="bottom" constant="70" id="CMu-8q-H9G"/>
+                            <constraint firstItem="HZe-uS-Xf9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DUx-cW-Ud3"/>
+                            <constraint firstItem="svc-bO-zUe" firstAttribute="top" secondItem="rQg-Yl-hdZ" secondAttribute="bottom" constant="14" id="DWe-9c-zau"/>
+                            <constraint firstItem="svc-bO-zUe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J9X-Gw-D0a"/>
+                            <constraint firstItem="sIi-Hp-yOX" firstAttribute="top" secondItem="HZe-uS-Xf9" secondAttribute="bottom" constant="67" id="P5m-jO-ANc"/>
+                            <constraint firstItem="sIi-Hp-yOX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kkt-zi-JPX"/>
+                            <constraint firstItem="HZe-uS-Xf9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="116" id="rqs-hM-cid"/>
+                            <constraint firstItem="rQg-Yl-hdZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yIf-tV-SjH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="qrCodeImageView" destination="sIi-Hp-yOX" id="zrE-IM-hNf"/>
+                        <outlet property="urlTextField" destination="HZe-uS-Xf9" id="FSw-7v-3Sc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>

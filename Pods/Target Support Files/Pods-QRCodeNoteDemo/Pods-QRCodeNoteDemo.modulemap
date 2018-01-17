@@ -1,0 +1,6 @@
+framework module Pods_QRCodeNoteDemo {
+  umbrella header "Pods-QRCodeNoteDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

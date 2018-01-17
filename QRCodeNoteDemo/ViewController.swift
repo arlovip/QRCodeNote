@@ -10,16 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var urlTextField: UITextField!
+    @IBOutlet weak var qrCodeImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func generateQRCode() {
+        qrCodeImageView.generateQRCodeWith(url: urlTextField.text!)
     }
-
-
+    
+    @IBAction func GenerateQRCode2() {
+        let url = "https://baike.baidu.com/item/二维码/2385673?fr=aladdin"
+        qrCodeImageView.generateQRCodeWith(url: url)
+    }
 }
 

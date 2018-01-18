@@ -32,11 +32,12 @@ private struct QRCode {
         let scale = min(byValue / extent.width, byValue / extent.height)
         
         let ciContext = CIContext(options: nil)
-        let ciImage = ciContext.createCGImage(inputCIImage, from: extent)
-        guard let ciImg = ciImage else {
+        let cgImage = ciContext.createCGImage(inputCIImage, from: extent)
+
+        guard let cgImg = cgImage else {
             return UIImage()
         }
-        
+    
         let width = Int(extent.width * scale)
         let height = Int(extent.height * scale)
         let colorSpace = CGColorSpaceCreateDeviceGray()
@@ -52,12 +53,13 @@ private struct QRCode {
         
         cgContext?.interpolationQuality = .none
         cgContext?.scaleBy(x: scale, y: scale)
-        cgContext?.draw(ciImg, in: extent)
-        guard let cgImage = cgContext?.makeImage() else {
+        cgContext?.draw(cgImg, in: extent)
+
+        guard let finalCGImage = cgContext?.makeImage() else {
             return UIImage()
         }
         
-        return UIImage(cgImage: cgImage)
+        return UIImage(cgImage: finalCGImage)
     }
 }
 

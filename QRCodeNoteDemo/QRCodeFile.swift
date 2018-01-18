@@ -18,50 +18,46 @@ extension UIImageView {
         // key is like the following which cannot be changed
         filter?.setValue(data, forKey: "InputMessage")
         if let outputImage = filter?.outputImage {
-            let value = max(frame.width, frame.height)
-            self.image = QRCode.createImage(inputCIImage: outputImage, floatValue: value)
+            let scaleValue = max(frame.width, frame.height)
+            self.image = QRCode.transformWith(inputCIImage: outputImage, scale: scaleValue)
         }
     }
 }
 
 private struct QRCode {
     
-    static func createImage(inputCIImage: CIImage, floatValue: CGFloat) -> UIImage {
+    static func transformWith(inputCIImage: CIImage, scale byValue: CGFloat) -> UIImage {
         
         let extent = inputCIImage.extent.integral
-        let scale = min(floatValue / extent.width, floatValue / extent.height)
-        
-        // First. Create bit map
-        let width = extent.width * scale
-        let height = extent.height * scale
-        let cs = CGColorSpaceCreateDeviceGray()
-        
-        let cgContext = CGContext(data: nil,
-                                  width: Int(width),
-                                  height: Int(height),
-                                  bitsPerComponent: 8,
-                                  bytesPerRow: 0,
-                                  space: cs,
-                                  bitmapInfo: CGImageAlphaInfo.none.rawValue)
+        let scale = min(byValue / extent.width, byValue / extent.height)
         
         let ciContext = CIContext(options: nil)
-        
         let ciImage = ciContext.createCGImage(inputCIImage, from: extent)
-        guard let ciimage = ciImage else {
+        guard let ciImg = ciImage else {
             return UIImage()
         }
+        
+        let width = Int(extent.width * scale)
+        let height = Int(extent.height * scale)
+        let colorSpace = CGColorSpaceCreateDeviceGray()
+        let bitmapInfo = CGImageAlphaInfo.none.rawValue
+        
+        let cgContext = CGContext(data: nil,
+                                  width: width,
+                                  height: height,
+                                  bitsPerComponent: 8,
+                                  bytesPerRow: 0,
+                                  space: colorSpace,
+                                  bitmapInfo: bitmapInfo)
         
         cgContext?.interpolationQuality = .none
         cgContext?.scaleBy(x: scale, y: scale)
-        cgContext?.draw(ciimage, in: extent)
-        
-        // Second. Save CIImage to CGImage
-        let cgImage = cgContext?.makeImage()
-        guard let cgimage = cgImage else {
+        cgContext?.draw(ciImg, in: extent)
+        guard let cgImage = cgContext?.makeImage() else {
             return UIImage()
         }
         
-        return UIImage(cgImage: cgimage)
+        return UIImage(cgImage: cgImage)
     }
 }
 

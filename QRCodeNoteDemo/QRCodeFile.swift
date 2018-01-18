@@ -16,7 +16,7 @@ extension UIImageView {
         let filter = CIFilter(name: "CIQRCodeGenerator")
         filter?.setDefaults()
         // key is like the following which cannot be changed
-        filter?.setValue(data, forKey: "InputMessage")
+        filter?.setValue(data, forKey: "inputMessage")
         if let outputImage = filter?.outputImage {
             let scaleValue = max(frame.width, frame.height)
             self.image = QRCode.transformWith(inputCIImage: outputImage, scale: scaleValue)
